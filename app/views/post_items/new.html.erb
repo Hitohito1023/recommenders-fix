@@ -1,0 +1,40 @@
+<h1>新規投稿</h1>
+
+<%= form_with model:@post_item, local:true do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
+  <div class="post-item-new">
+  	<div class="post-item-new-image">
+    	<h2><%= f.label :image, "イメージ画像" %></h2>
+    	<%= attachment_image_tag @post_item, :image, id: "img_prev", size:'400x500', fallback: "no_image.jpg" %></br>
+    	<%= f.attachment_field :image %>
+    </div>
+
+    <div class="post-item-new-form">
+      <h2><%= f.label :name %></h2>
+      <%= f.text_field :name %>
+
+      <h2><%= f.label :introduction %></h2>
+      <%= f.text_area :introduction, class: 'js-text', size: "50x15", placeholder: "ネタバレはお控えください。140文字まで入力が可能です。" %>
+      <a class="counter">0文字</a><a>/140文字</a>
+
+      <h2><%= f.label :genre_id, "カテゴリー" %></h2>
+      <%= f.collection_select :genre_id, Genre.all, :id, :name %></br></br></br>
+      <p>※カテゴリーがない場合は下記より追加してください。</p>
+
+      <%= f.submit "投稿", class:"btn" %>
+    </div>
+  </div>
+<% end %>
+
+<div align="right">
+  <%= link_to "投稿せずに戻る", post_items_path %>
+</div>
+
+<div class="genre-form">
+  <h2>カテゴリーの登録</h2>
+  <%= form_with model:@genre, local:true do |f| %>
+  	<%= f.text_field :name %>
+  	<%= f.submit "追加する", class:"btn" %>
+  <% end %>
+</div>
+

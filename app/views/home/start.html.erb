@@ -1,0 +1,91 @@
+<div class="start">
+  <div class="start-1">
+    <h1>
+      ようこそ！！</br>
+      Recommendersへ
+    </h1>
+    <div class="start-image"></div>
+    <button class="btn1">Recommendersとは？</button><br><br>
+    <button class="btn"><%= link_to "ログインする", new_user_session_path %></button>
+    <button class="btn"><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %></button>
+  </div>
+
+  <div class="start-2 section">
+    <div class="top-image1"></div>
+    <div class="start-2-content">
+      <h2>
+        Recomendersとは?</br>
+        Recommender（＝推薦人）となって、<br>
+        おすすめの商品を投稿するサイトです。
+      </h2>
+      <h3>
+        あなたがおすすめする商品やサービスを</br>
+        あなたの文章で紹介しましょう！！
+      </h3>
+      <h3>
+        概要を書くも良し、感想を書くも良し、</br>
+        書き方はあなたの自由です。
+      </h3>
+      <p>※投稿には会員登録が必要です。</p><br>
+      <button class="btn2">次へ</button>
+    </div>
+  </div>
+
+  <div class="start-3 section">
+    <div class="start-3-content">
+      <h2>
+        投稿を見て、</br>
+        実際に商品を買った・利用したら、</br>
+        投稿に対してPointを渡そう！！
+      </h2>
+      <h3>
+        各投稿に対して1pointのPointを渡すことができます。</br>
+        コメントも投稿可能ですので、</br>
+        利用した感想などをコメントしましょう！！
+      </h3>
+      <p>※Point・コメントの投稿には会員登録が必要です。</p></br>
+      <button class="btn3">次へ</button>
+    </div>
+    <div class="top-image2"></div>
+  </div>
+
+  <div class="start-4 section">
+    <div class="top-image3"></div>
+    <div class="start-4-content">
+      <h2>どんどん投稿してPointを稼ごう！！</h2>
+      <h3>
+        他の人に「使ってみたい・利用しようかな」と</br>
+        思わせるような文章を書くことがコツです。</br>
+        但しネタバレは厳禁です。</br>
+        あなたの素直な気持ちを文章で表現しましょう。
+      </h3>
+      <p>※Pointを稼ぐには会員登録が必要です。</p></br>
+      <button class="btn4">次へ</button>
+    </div>
+  </div>
+
+  <div class="start-5 section">
+    <div class="start-5-content">
+      <h2>もちろん投稿を見るだけでも大丈夫！！</h2>
+      <h3>
+        見たい映画がない、やりたいゲームがない、</br>
+        そんな時は投稿を探してみましょう。</br>
+        Recommender達が書いた投稿を読めば、</br>
+        利用したくなる商品がきっと見つかるはずです。
+      </h3>
+      <p>※閲覧のみの場合、会員登録は不要です。</p></br>
+      <button class="btn5">次へ</button>
+    </div>
+    <div class="top-image4"></div>
+  </div>
+
+  <div class="start-6 section">
+    <h1>
+      さあ、君もRecommenderになろう！！
+    </h1>
+      <button class="btn"><%= link_to '新規登録', new_user_registration_path %></button>
+      <button class="btn"><%= link_to '登録せずに閲覧する', home_top_path %></button>
+      <button class="btn"><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %></button>
+  </div>
+</div>
+

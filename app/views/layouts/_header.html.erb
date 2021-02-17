@@ -1,0 +1,54 @@
+<% if user_signed_in? %>
+  <header>
+    <h1 class="header-title">
+      <%= link_to home_top_path do %>
+        <%= image_tag 'logo1.jpg' %>
+      <% end %>
+    </h1>
+    <nav class="header-nav">
+      <ul class="header-item">
+        <li>ようこそ!! <%= current_user.name %>さん</li>
+        <li><i class="fas fa-crown"></i><%= link_to 'ランキング', home_ranking_path %></li>
+        <li class="dropdown">
+          <i class="fas fa-list"></i><%= link_to '投稿一覧▼', post_items_path %>
+            <ul class="dropdown-menu">
+              <li><%= link_to '全ての投稿', post_items_path %></li>
+              <% genres = Genre.all %>
+              <% genres.each do |genre| %>
+              <li>・<%= link_to genre.name, post_items_path(genre_id: genre.id) %></li>
+              <% end %>
+            </ul>
+        </li>
+        <li><i class="fas fa-users"></i><%= link_to 'ユーザー', users_path %></li>
+        <li><i class="fas fa-user"></i><%= link_to 'マイページ', user_path(current_user.id) %></li>
+        <li><i class="fas fa-sign-out-alt"></i><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </nav>
+  </header>
+  <% else %>
+  <header>
+      <h1 class="header-title">
+        <%= link_to home_top_path do %>
+          <%= image_tag 'logo1.jpg' %>
+        <% end %>
+      </h1>
+      <nav class="header-nav">
+        <ul class="header-item">
+          <li><i class="fas fa-crown"></i><%= link_to 'ランキング', home_ranking_path %></li>
+          <li class="dropdown">
+            <i class="fas fa-list"></i><%= link_to '投稿一覧', post_items_path %>
+            <ul class="dropdown-menu">
+              <li><%= link_to '全ての投稿', post_items_path %></li>
+              <% genres = Genre.all %>
+              <% genres.each do |genre| %>
+              <li>・<%= link_to genre.name, post_items_path(genre_id: genre.id) %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li><i class="fas fa-users"></i><%= link_to 'ユーザー', users_path %></li>
+          <li><i class="fas fa-user-plus"></i><%= link_to '新規登録', new_user_registration_path %></li>
+          <li><i class="fas fa-sign-in-alt"></i><%= link_to 'ログイン', new_user_session_path %></li>
+        </ul>
+      </nav>
+  </header>
+<% end %>

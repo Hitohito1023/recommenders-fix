@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recommenders</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/639d4d1d29.js" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+    <div id="contents">
+      <% unless current_page?(root_path) %>
+        <%= render 'layouts/header' %>
+      <% end %>
+
+      <main>
+        <% unless current_page?(root_path) %>
+          <%= render 'search/search_form' %>
+        <% end %>
+        <%= render 'layouts/notice' %>
+        <%= yield %>
+      </main>
+
+      <footer>
+        <p class="copy-right">© All rights reserved by ryota.</p>
+      </footer>
+    </div>
+  </body>
+</html>

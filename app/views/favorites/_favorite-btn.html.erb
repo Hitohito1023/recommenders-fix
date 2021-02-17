@@ -1,0 +1,17 @@
+<% if post_item.user == current_user %>
+  <i class="fas fa-coins" aria-hidden="true" style="color: yellow;"></i>
+  <%= post_item.favorites.count %> point
+<% else %>
+  <% if post_item.favorited_by?(current_user) %>
+    <%= link_to post_item_favorites_path(post_item), method: :delete, remote: true do %>
+      <i class="fas fa-coins" aria-hidden="true" style="color: yellow;"></i>
+      <%= post_item.favorites.count %> point
+    <% end %>
+  <% else %>
+    <%= post_item.favorites.count %> point
+    <%= link_to post_item_favorites_path(post_item), method: :post, remote: true do %>
+  　  ポイントを渡す
+      <i class="fas fa-coins" aria-hidden="true"></i>
+    <% end %>
+  <% end %>
+<% end %>

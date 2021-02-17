@@ -1,0 +1,37 @@
+<h1>登録情報変更</h1>
+
+<%= form_with model:@user, local: true do |f| %>
+
+<%= render 'layouts/error_messages', model: f.object %>
+
+<div class="user-edit">
+	<div class="user-edit-image">
+		<h2><%= f.label "プロフィール画像" %></h2>
+		<%= attachment_image_tag @user, :profile_image, id: "img_prev", size:'300x300', fallback: "no_image_icon.jpg" %></br>
+		<%= f.attachment_field :profile_image, :placeholder =>"#{@user.profile_image}" %>
+	</div>
+
+	<div class="user-edit-form">
+		<h2><%= f.label :name %></h2>
+		<%= f.text_field :name %>
+
+		<h2><%= f.label :email %></h2>
+		<%= f.email_field :email %>
+
+		<h2><%= f.label "自己紹介(100文字まで)" %></h2>
+		<%= f.text_area :introduction, class: 'js-text', size: "50x10" %>
+		<a class="counter">0文字</a><a>/100文字</a>
+
+		<div align="right"><%= f.submit "保存", class:"btn" %></div>
+
+	</div>
+</div>
+
+<div align="right">
+	<%= link_to "退会はこちら=>", users_unsubscribe_path %>
+</div>
+
+
+<% end %>
+
+

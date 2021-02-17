@@ -1,0 +1,11 @@
+<h1>フォロー一覧</h1>
+
+<% if @users.exists? %>
+  <%= render 'users/index', users: @users %>
+<% else %>
+  <div class="no-user">
+    <h2>該当ユーザーはいません。</h2>
+  </div>
+<% end %>
+
+<div class="paginate"><%= paginate @users %></div>

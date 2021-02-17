@@ -1,0 +1,17 @@
+<div class="search-index">
+<% if @model == 'user' %>
+  <% if @records.exists? %>
+  	<h1> ユーザー"<%= @content %>"での検索結果（<%= @records.count %>件）</h1>
+    <%= render 'users/search_index', users: @records %>
+  <% else %>
+    <h1>ユーザー"<%= @content %>"での検索結果は0件です。</h1>
+  <% end %>
+<% elsif @model == 'PostItem' %>
+  <% if @records.exists? %>
+	  <h1> 投稿"<%= @content %>"での検索結果（<%= @records.count %>件）</h1>
+    <%= render 'post_items/search_index', post_items: @records %>
+  <% else %>
+    <h1>投稿"<%= @content %>"での検索結果は0件です。</h1>
+  <% end %>
+<% end %>
+</div>

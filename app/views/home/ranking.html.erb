@@ -1,0 +1,62 @@
+<h1>ランキング</h1>
+
+<div class="wrap">
+  <ul id="tab-menu">
+    <li><a href="#tab1" class="active">Point数</a></li>
+    <li><a href="#tab2" class="">投稿数</a></li>
+    <li><a href="#tab3" class="">フォロワー数</a></li>
+  </ul>
+
+  <div id="tab-contents">
+    <div id="tab1" class="tab">
+      <% @post_items.first(7).each.with_index(1) do |post_item, i | %>
+        <div class="tab-content">
+          <p></p><h4>第<%= i %>位</h4>
+          <%= link_to post_item_path(post_item) do %>
+  					<%= attachment_image_tag post_item, :image, size:'200x300', fallback: "no_image.jpg" %>
+  					<h5 align="center"><%= post_item.name.truncate(16) %></h5>
+  				<% end %>
+  				<h3 align="center">
+					<i class="fas fa-coins" aria-hidden="true" style="color: yellow;"></i>
+		    	<%= post_item.favorites.count %> points
+		    	</h3>
+        </div>
+      <% end %>
+    </div>
+
+    <div id="tab2" class="tab">
+	    <% @users.first(7).each.with_index(1) do |user, i | %>
+        <div class="tab-user-content">
+          <p></p><h4>第<%= i %>位</h4>
+			    <%= link_to user_path(user) do %>
+            <%= attachment_image_tag user, :profile_image, size:'250x250', fallback: "no_image_icon.jpg" %>
+				    <h5 align="center"><%= user.name.truncate(16) %></h5>
+			    <% end %>
+          <h3 align="center">
+					  <i class="fas fa-pen"></i>
+		    	  <%= user.post_items.count %>件
+		    	</h3>
+		    </div>
+	    <% end %>
+    </div>
+
+    <div id="tab3" class="tab">
+	    <% @user_followers.first(7).each.with_index(1) do |user_follower, i | %>
+        <div class="tab-user-content">
+          <p></p><h4>第<%= i %>位</h4>
+			    <%= link_to user_path(user_follower) do %>
+            <%= attachment_image_tag user_follower, :profile_image, size:'250x250', fallback: "no_image_icon.jpg" %>
+				    <h5 align="center"><%= user_follower.name.truncate(16) %></h5>
+			    <% end %>
+          <h3 align="center">
+					  <i class="fas fa-user-friends"></i>
+					  <%= user_follower.followers.count %>人
+		    	</h3>
+		    </div>
+	    <% end %>
+    </div>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,74 @@
+<h1>投稿詳細</h1>
+
+<div class="post-item-show">
+	<%= attachment_image_tag @post_item, :image, size:'400x500', fallback: "no_image.jpg" %>
+	<div class="post-item-recommend">
+		<h2>タイトル</h2>
+		<p><%= @post_item.name %></p></br>
+		<h2>紹介文</h2>
+		<p><%= @post_item.introduction %></p></br>
+		<h2>カテゴリー</h2>
+		<p><%= @post_item.genre.name %></p></br>
+		<h2>投稿者</h2>
+		<p><%= link_to @post_item.user.name, user_path(@post_item.user) %></p></br>
+
+		<div>
+			<% if user_signed_in? %>
+				<% if current_user != @user %>
+		  		<% if current_user.following?(@user) %>
+		    		<%= link_to "フォロー中", user_relationships_path(@user.id), method: :delete, class: "btn" %>
+		  		<% else %>
+		    		<%= link_to "フォローする", user_relationships_path(@user.id), method: :post, class: "btn" %>
+		  		<% end %>
+				<% end %>
+			<% end %>
+		</div></br>
+
+		<div class="post-item-icons">
+			<div id="comment-count_<%= @post_item.id %>">
+				<%= render "post_comments/count", post_item: @post_item %>
+			</div>
+
+			<% if user_signed_in? %>
+				<div id='favorite-btn_<%= @post_item.id %>'>
+					<%= render "favorites/favorite-btn", post_item: @post_item %>
+				</div>
+			<% else %>
+				<div>
+					<i class="fas fa-coins" aria-hidden="true" style="color: yellow;"></i>
+					<%= @post_item.favorites.count %> point
+				</div>
+			<% end %>
+		</div><br>
+
+
+
+		<% if @post_item.user == current_user %>
+			<%= link_to "編集", edit_post_item_path(@post_item), class: 'btn' %>
+			<%= link_to "削除", post_item_path(@post_item), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: 'btn-danger' %>
+		<% end %>
+	</div>
+</div>
+
+
+<h2 class="comment-title">コメント</h2>
+<div class="post-comment">
+
+	<div id="comment-index">
+		<%= render "post_comments/index", post_comments: @post_comments %><br>
+		<%= link_to_next_page @post_comments, 'もっと見る', remote: true, class: 'more-link', id: 'more-link' %>
+	</div>
+
+
+	<% if user_signed_in? %>
+		<%= form_with model:[@post_item, @post_comment], remote: true do |f| %>
+	  <div class="comment-form">
+	  	<%= f.text_area :comment, size:"60x5", placeholder: "コメントをここに。100文字までコメントが可能です。" %>
+	  	<div align="right"><%= f.submit "コメント", class:"btn" %></div>
+	  </div>
+		<% end %>
+	<% else %>
+		<p>　　※コメントには登録が必要です</p>
+	<% end %>
+</div>
+

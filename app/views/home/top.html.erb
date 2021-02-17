@@ -1,0 +1,49 @@
+<div id="top-slide">
+  <div id="slide-image">
+    <div class="image1"></div>
+    <div class="image2"></div>
+    <div class="image3"></div>
+  </div>
+</div>
+
+<div class="top-slide">
+  <h2>おすすめ投稿</h2></br>
+  <div class="recommend-items">
+    <% @post_items.each do |post_item| %>
+      <div class="recommend-item">
+      	<%= link_to post_item_path(post_item) do %>
+      		<%= attachment_image_tag post_item, :image, size:'250x350', fallback: "no_image.jpg" %>
+      		<h5><%= post_item.name.truncate(20) %></h5>
+      	<% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="top-slide">
+  <h2>新着投稿</h2></br>
+  <div class="recommend-items">
+    <% @new_post_items.each do |post_item| %>
+      <div class="recommend-item">
+      	<%= link_to post_item_path(post_item) do %>
+      		<%= attachment_image_tag post_item, :image, size:'250x350', fallback: "no_image.jpg" %>
+      		<h5><%= post_item.name.truncate(20) %></h5>
+      	<% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="top-slide">
+  <h2>おすすめユーザー</h2></br>
+  <div class="recommend-users">
+  	<% @users.each do |user| %>
+  		<div class="recommend-user">
+  			<%= link_to user_path(user) do %>
+  				<%= attachment_image_tag user, :profile_image, size:'250x250', fallback: "no_image_icon.jpg" %>
+  				<h5><%= user.name.truncate(18) %></h5>
+  			<% end %>
+  		</div>
+  	<% end %>
+  </div>
+</div>

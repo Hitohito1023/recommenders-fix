@@ -1,0 +1,31 @@
+<h1>投稿編集</h1>
+
+<%= form_with model:@post_item, local:true do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
+  <div class="post-item-edit">
+  	<div class="post-item-edit-image">
+    	<h2><%= f.label :image, "イメージ画像" %></h2>
+    	<%= attachment_image_tag @post_item, :image, id: "img_prev", size:'400x500', fallback: "no_image.jpg" %></br>
+    	<%= f.attachment_field :image %>
+    </div>
+
+    <div class="post-item-edit-form">
+      <h2><%= f.label :name, "タイトル" %></h2>
+      <%= f.text_field :name %>
+
+      <h2><%= f.label :introduction, "紹介文(140文字まで)" %></h2>
+      <%= f.text_area :introduction, class: 'js-text', size: "50x15" %>
+      <p class="counter">0文字</p>
+
+      <h2><%= f.label :genre_id, "カテゴリー" %></h2>
+      <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+
+      <div class="save-btn"><%= f.submit "保存", class:"btn" %></div>
+    </div>
+  </div>
+<% end %>
+
+<div align="right">
+  <%= link_to "保存せずに戻る", post_item_path(@post_item) %>
+  </div>
+

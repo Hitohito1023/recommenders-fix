@@ -1,0 +1,20 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        encrypted_password: "パスワード"
+        password: "パスワード(確認用)"
+        introduction: "自己紹介"
+      post_item:
+        name: "タイトル"
+        introduction: "紹介文"
+      genre:
+        name: "カテゴリー名"
+  views:
+    pagination:
+      first: '最初'
+      last: '最後'
+      previous: '前'
+      next: '次'

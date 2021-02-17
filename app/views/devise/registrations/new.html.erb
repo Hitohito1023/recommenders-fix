@@ -1,0 +1,50 @@
+<h1 class="new-user" align="center">ユーザー新規登録</h1>
+
+<div class="signup-form">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%#= render "devise/shared/error_messages", resource: resource %>
+  <%= render 'layouts/error_messages', model: f.object %>
+
+
+  <div class="field">
+    <%= f.label :name, "名前" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "メールアドレス" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div>
+    <%= f.label :profileImage, "アカウント画像（登録後でも設定が可能です）" %><br/>
+    <%= attachment_image_tag @user, :profile_image, id:"img_prev", size:"100x100", fallback: "no_image_icon.jpg"%></br>
+    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
+  </div></br>
+
+  <div class="field">
+    <%= f.label :introduction, "自己紹介"%>
+    <%= f.text_area :introduction, class: 'js-text', autofocus: true, autocomplete: "introduction", placeholder: "100文字まで入力が可能です。登録後でも設定が可能です。" %>
+    <a class="counter">0文字</a><a>/100文字</a></br></br>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "パスワード" %>
+    <% if @minimum_password_length %>
+    (<%= @minimum_password_length %> 文字以上でお願い致します)
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "パスワード（確認用）" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "新規登録", class:"btn" %>
+  </div></br>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>

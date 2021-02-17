@@ -1,0 +1,50 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// search/search------------------------------------------------------------
+.search-index {
+  min-height: 600px;
+}
+
+// search/_search_form------------------------------------------------------------
+.search-form {
+  text-align: right;
+}
+
+// post_items/_search_index-----------------------------------------------------------
+.search-item-content {
+  width: 1100px;
+  min-height: 580px;
+  margin: 20px auto;
+  .search-item {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      border-radius: 2%;
+      border: 1px solid black;
+    }
+    a {
+      margin: 20px 70px 0 0;
+      text-align: center;
+    }
+  }
+}
+
+// users/_search_index-----------------------------------------------------------
+.search-user-content {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 580px;
+  .search-user {
+    margin: 20px;
+    img {
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.5);
+    }
+    h3 {
+      text-align: center;
+    }
+  }
+}
+

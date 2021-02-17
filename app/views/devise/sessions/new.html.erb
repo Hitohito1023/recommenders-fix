@@ -1,0 +1,31 @@
+<h1 class="login-user" align="center">ログイン</h1>
+
+<div class="login-form">
+<%= form_with model:@user, url: session_path(resource_name), local: true do |f| %>
+
+  <div class="field">
+    <%= f.label :email, "メールアドレス" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "パスワード" %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, "自動ログイン" %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン", class:"btn" %>
+  </div></br>
+<% end %>
+  <div>
+    <%= render "devise/shared/links" %>
+    <%= link_to 'ゲストログインはこちら', users_guest_sign_in_path, method: :post %>
+  </div>
+</div>
