@@ -295,7 +295,16 @@
 
 // レスポンシブ対応-------------------------------------------------------
 
-@media screen and (max-width:480px) {  
+@media screen and (max-width:480px) {
+
+  // /post_items/index---------------------
+  .post-btn {
+    font-size     : 20px;
+    padding       : 5px 0px;
+    margin: 30px auto;
+    width: 90%;
+  }
+
   .post-item-index {
     display: block;
     .genre-sidebar {
@@ -312,8 +321,11 @@
         text-align: center;
       }
       .post-item {
+        margin: 0 auto;
 
         a {
+          margin: 20px auto;
+
         }
       }
     }
