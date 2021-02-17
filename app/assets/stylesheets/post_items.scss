@@ -331,5 +331,49 @@
     }
   }
 
+  // /post_items/show----------------
+  .post-item-show {
+    display: block;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    img {
+      margin: 20px;
+      text-align: center;
+    }
+    .post-item-recommend {
+      width: 100%;
+      margin-left: 0px;
+      a {
+        margin-right: 0px;
+      }
+      .post-item-icons {
+        display: block;
+      }
+    }
+  }
+
+  .comment-title {
+    padding-left: 20px;
+  }
+
+  .post-comment {
+    display: block;
+    ol {
+      width: 90%;
+      li {
+        margin-left: 30px;
+        }
+    }
+    .comment-form {
+      margin-left: 0px;
+      textarea {
+        margin-left: 15px;
+        width: 85%;
+      }
+    }
+  }
+
+
 
 }
