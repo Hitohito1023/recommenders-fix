@@ -48,3 +48,13 @@
   }
 }
 
+// レスポンシブ対応-------------------------------------------------------
+
+
+@media screen and (max-width:480px) {
+  .search-form {
+    text-align: center;
+    margin: 20px;
+  }
+  
+}
