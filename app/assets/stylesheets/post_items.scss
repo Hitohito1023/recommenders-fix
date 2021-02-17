@@ -374,6 +374,29 @@
     }
   }
 
+  // /post_items/edit----------------
+  .post-item-edit {
+    display: block;
+    padding: 40px 10px;
+    text-align: center;
+    img {
+      margin: 10px auto;
+      border-radius: 2%;
+      border: 1px solid black;
+    }
+    .post-item-edit-form {
+      margin-left: 0px;
+      margin-top: 20px;
+      #post_item_name, textarea, select {
+        float: none;
+        width: 90%;
+      }
+      .save-btn {
+        margin: 40px auto;
+      }
+    }
+  }
+
 
 
 }
