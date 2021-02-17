@@ -80,8 +80,8 @@ gem 'rubocop', require: false
 
 gem 'rails_admin'
 
-gem 'dotenv-rails'
-group :production do
-  gem 'mysql2'
-end
+# gem 'dotenv-rails'
+# group :production do
+#   gem 'mysql2'
+# end
 
