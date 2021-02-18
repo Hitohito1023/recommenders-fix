@@ -161,3 +161,27 @@
     margin: 0 auto;
   }
 }
+
+// レスポンシブ対応-----------------------------------------------
+
+@media screen and (max-width:480px) {
+
+  // users/index----------------------------------
+  .users-index {
+    display: block;
+    flex-wrap: wrap;
+    // min-height: 520px;
+    .users-index-content {
+      // margin: 20px;
+      img {
+        // border-radius: 50%;
+        // border: 1px solid rgba(0,0,0,0.5);
+      }
+      h3 {
+        // text-align: center;
+      }
+    }
+  }
+
+
+}
