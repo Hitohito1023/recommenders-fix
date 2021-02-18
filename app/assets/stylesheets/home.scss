@@ -490,4 +490,38 @@
 
 @media screen and (max-width:480px) {
 
+  // homes/ranking------------------------------------------------------------
+  .tab-content:first-child {
+    margin: 0px auto 30px;
+  }
+
+  .tab-content:nth-child(2) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-content:nth-child(3) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-content:nth-child(n+4) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-user-content:first-child {
+    margin: 0px auto 30px;
+  }
+
+  .tab-user-content:nth-child(2) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-user-content:nth-child(3) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-user-content:nth-child(n+4) {
+    margin: 0px auto 30px;
+  }
+
+
 }
