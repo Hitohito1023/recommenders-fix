@@ -397,6 +397,32 @@
     }
   }
 
+  // /post_items/new----------------
+  .post-item-new {
+    display: block;
+    padding: 0px;
+    text-align: center;
+    margin-top: 20px;
+    .post-item-new-form {
+      margin-left: 0px;
+      margin-top: 20px;
+
+      #post_item_name, textarea, select {
+        width: 80%;
+        float: none;
+        display: flex;
+        margin: 10px auto;
+      }
+    }
+  }
+
+  .genre-form {
+    text-align: center;
+    #genre_name {
+      display: flex;
+    }
+  }
+
 
 
 }

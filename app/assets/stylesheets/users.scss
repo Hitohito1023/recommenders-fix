@@ -169,19 +169,49 @@
   // users/index----------------------------------
   .users-index {
     display: block;
-    flex-wrap: wrap;
-    // min-height: 520px;
     .users-index-content {
-      // margin: 20px;
-      img {
-        // border-radius: 50%;
-        // border: 1px solid rgba(0,0,0,0.5);
-      }
-      h3 {
-        // text-align: center;
-      }
+      text-align: center;
     }
   }
 
+  // users/show----------------------------------
+  .user-show {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+    margin: 40px 0;
+    .user-show-content {
+      margin-left: 0px;
+      width: 100%;
+    }
+  }
 
+  .user-post {
+      text-align: center;
+  }
+
+  // users/edit----------------------------------
+  .user-edit {
+    display: block;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+    margin-top: 20px;
+    .user-edit-form {
+      margin-left: 0px;
+      margin-top: 20px;
+      text-align: center;
+      #user_name, #user_email, textarea {
+        display: flex;
+        float: none;
+        width: 80%;
+        margin: 10px auto;
+      }
+      div {
+        text-align: center;
+      }
+    }
+  }
+  
 }

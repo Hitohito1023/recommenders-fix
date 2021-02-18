@@ -490,4 +490,90 @@
 
 @media screen and (max-width:480px) {
 
+  // homes/ranking------------------------------------------------------------
+  .tab-content:first-child {
+    margin: 0px auto 30px;
+  }
+
+  .tab-content:nth-child(2) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-content:nth-child(3) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-content:nth-child(n+4) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-user-content:first-child {
+    margin: 0px auto 30px;
+  }
+
+  .tab-user-content:nth-child(2) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-user-content:nth-child(3) {
+    margin: 0px auto 30px;
+  }
+
+  .tab-user-content:nth-child(n+4) {
+    margin: 0px auto 30px;
+  }
+
+
+  
+  // homes/top------------------------------------------------------------
+  
+  #top-slide {
+    width: 100%;
+    .image1 {
+      background-size: 900px 200px;
+    }
+    .image2 {
+      background-size: 800px 200px;
+    }
+    .image3 {
+      background-size: 600px 200px;
+    }
+  }
+
+  .recommend-items {
+    display: block;
+    width: 80%;
+    img {
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  .recommend-users {
+    display: block;
+    width: 80%;
+    .recommend-user {
+      img {
+        width: 200%;
+        height: 200%;
+      }
+    }
+  }
+
+  .fa-chevron-left {
+    left: -40px;
+    top: 25px;
+  }
+
+  .fa-chevron-right {
+    right: -40px;
+    top: 25px
+  }
+
+  .top-slide {
+    text-align: center;
+  }
+
+
+
 }
