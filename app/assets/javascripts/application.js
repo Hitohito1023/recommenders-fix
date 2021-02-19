@@ -142,6 +142,7 @@ $(document).on("turbolinks:load", function(){
   });
 });
 
+// ハンバーガーメニュー
 $(document).on("turbolinks:load",function() {
   $('.menu-trigger').on('click', function(event) {
     $(this).toggleClass('active');
@@ -149,3 +150,28 @@ $(document).on("turbolinks:load",function() {
     event.preventDefault();
   });
 });
+
+// トップへ戻るボタン
+$(document).on("turbolinks:load",function() {
+  var topBtn = $('#page_top');
+  topBtn.hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+　　　　　　　//フェードインで表示
+        topBtn.fadeIn();
+    } else {
+　　　　　　　//フェードアウトで非表示
+        topBtn.fadeOut();
+    }
+  });
+  $('#page_top a').on('click',function(event){
+    $('body, html').animate({
+      scrollTop:0
+    }, 1500);
+    event.preventDefault();
+  });
+});
+
+
+
+
