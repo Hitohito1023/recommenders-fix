@@ -34,7 +34,7 @@ $(document).on('turbolinks:load',function () {
     transition : 'slide',
     speed : 2000,
     easing : 'easeOutQuart',
-    navType : 'block',
+    navType : 'none',
     childrenElementType : 'div',
     arrows : true,
     autoPlay : true,
@@ -139,5 +139,13 @@ $(document).on("turbolinks:load", function(){
     $('.btn5').on('click', function() {
     $('.start-5').fadeOut(2000);
     $('.start-6').fadeIn(2000);
+  });
+});
+
+$(document).on("turbolinks:load",function() {
+  $('.menu-trigger').on('click', function(event) {
+    $(this).toggleClass('active');
+    $('#sp-menu').fadeToggle();
+    event.preventDefault();
   });
 });

@@ -5,7 +5,7 @@
         <%= image_tag 'logo1.jpg' %>
       <% end %>
     </h1>
-    <nav class="header-nav">
+    <nav class="pc-header-nav">
       <ul class="header-item">
         <li>ようこそ!! <%= current_user.name %>さん</li>
         <li><i class="fas fa-crown"></i><%= link_to 'ランキング', home_ranking_path %></li>
@@ -24,6 +24,26 @@
         <li><i class="fas fa-sign-out-alt"></i><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
       </ul>
     </nav>
+<%# スマホ用のメニュー %>
+    <div id="sp-menu">
+      <ul>
+        <li>ようこそ!! <%= current_user.name %>さん</li>
+        <li><i class="fas fa-crown"></i><%= link_to 'ランキング', home_ranking_path %></li>
+        <li><i class="fas fa-list"></i><%= link_to '投稿一覧', post_items_path %></li>
+        <li><i class="fas fa-users"></i><%= link_to 'ユーザー', users_path %></li>
+        <li><i class="fas fa-user"></i><%= link_to 'マイページ', user_path(current_user.id) %></li>
+        <li><i class="fas fa-sign-out-alt"></i><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </div>
+
+    <div id="hm-icon">
+      <a class="menu-trigger" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
   </header>
   <% else %>
   <header>
@@ -32,7 +52,7 @@
           <%= image_tag 'logo1.jpg' %>
         <% end %>
       </h1>
-      <nav class="header-nav">
+      <nav class="pc-header-nav">
         <ul class="header-item">
           <li><i class="fas fa-crown"></i><%= link_to 'ランキング', home_ranking_path %></li>
           <li class="dropdown">
@@ -50,5 +70,25 @@
           <li><i class="fas fa-sign-in-alt"></i><%= link_to 'ログイン', new_user_session_path %></li>
         </ul>
       </nav>
+<%# スマホ用のメニュー %>
+
+      <div id="sp-menu">
+        <ul>
+          <li><i class="fas fa-crown"></i><%= link_to 'ランキング', home_ranking_path %></li>
+          <li><i class="fas fa-list"></i><%= link_to '投稿一覧', post_items_path %></li>
+          <li><i class="fas fa-users"></i><%= link_to 'ユーザー', users_path %></li>
+          <li><i class="fas fa-user-plus"></i><%= link_to '新規登録', new_user_registration_path %></li>
+          <li><i class="fas fa-sign-in-alt"></i><%= link_to 'ログイン', new_user_session_path %></li>
+        </ul>
+      </div>
+
+      <div id="hm-icon">
+        <a class="menu-trigger" href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+
   </header>
 <% end %>
