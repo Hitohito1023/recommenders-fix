@@ -523,10 +523,8 @@
     margin: 0px auto 30px;
   }
 
-
-  
   // homes/top------------------------------------------------------------
-  
+
   #top-slide {
     width: 100%;
     .image1 {
@@ -574,6 +572,91 @@
     text-align: center;
   }
 
+  // homes/start------------------------------------------------------------
+  
+  .start-1 {
+    width: 100%;
+    display: block;
+    margin-top: 0px;
+    .start-image {
+      width: 100%;
+    }
+  }
 
+  .start-2 {
+    width: 100%;
+    display: block;
+    margin-top: 0px;
+    .top-image1 {
+      width: 100%;
+      height: 300px;
+    }
+    .start-2-content {
+      width: 100%;
+      h2 {
+         margin: 10px 0 10px 0;
+      }
+    }
+    .btn2 {
+      margin-bottom: 20px;
+    }
+  }
 
+  .start-3 {
+    width: 100%;
+    display: block;
+    margin-top: 0px;
+    .top-image2 {
+      width: 100%;
+      height: 300px;
+    }
+    .start-3-content {
+    width: 100%;
+      h2 {
+        margin: 10px 0 10px 0;
+      }
+    }
+  }
+
+  .start-4 {
+    width: 100%;
+    display: block;
+    margin-top: 0px;
+    .top-image3 {
+      width: 100%;
+      height: 300px;
+    }
+    .start-4-content {
+      h2 {
+        margin: 10px 0 10px 0;
+      }
+    }
+  }
+
+  .start-5 {
+    width: 100%;
+    display: block;
+    margin-top: 0px;
+    .top-image4 {
+      width: 100%;
+      height: 400px;
+    }
+    .start-5-content {
+      width: 100%;
+      h2 {
+        margin: 10px 0 10px 0;
+      }
+    }
+  }
+
+  .start-6 {
+    width: 100%;
+    margin-top: 0px;
+    h1 {
+      padding: 50px;
+    }
+    .btn, .btn1 {
+      margin: 10px 10px 10px 10px;
+    }
+  }
 }
