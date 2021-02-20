@@ -20,9 +20,10 @@
 }
 
 // body--------------------------------------------------------------
-html, body {
+html,
+body {
   height: 100%;
-  font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック';
+  font-family: "Hiragino Sans", "ヒラギノ角ゴシック";
   color: black;
 }
 
@@ -63,9 +64,9 @@ header {
   margin-right: 30px;
   li {
     margin: 0 0 0 15px;
-    color: #FFFFFF;
+    color: #ffffff;
     a {
-      color: #FFFFFF;
+      color: #ffffff;
     }
   }
 }
@@ -112,7 +113,8 @@ main {
   width: 400px;
   margin: 0 auto;
   height: 560px;
-  #user_email, #user_password {
+  #user_email,
+  #user_password {
     width: 370px;
     border: none;
     margin: 0.5rem 0;
@@ -130,15 +132,15 @@ main {
     color: darken(#f9f9f9, 50%);
   }
   .btn {
-    display       : inline-block;
-    border-radius : 5%;
-    font-size     : 15px;
-    text-align    : center;
-    cursor        : pointer;
-    padding       : 5px 5px;
-    background    : #03A9F4;
-    color         : #ffffff;
-    border        : 2px solid #03A9F4;
+    display: inline-block;
+    border-radius: 5%;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 5px;
+    background: #03a9f4;
+    color: #ffffff;
+    border: 2px solid #03a9f4;
     width: 150px;
     margin: 20px 130px;
   }
@@ -147,7 +149,10 @@ main {
 .signup-form {
   width: 400px;
   margin: 0 auto;
-   #user_name, #user_email, #user_password, #user_password_confirmation {
+  #user_name,
+  #user_email,
+  #user_password,
+  #user_password_confirmation {
     width: 370px;
     border: none;
     margin: 0.5rem 0;
@@ -167,21 +172,21 @@ main {
     color: darken(#f9f9f9, 50%);
   }
   .btn {
-    display       : inline-block;
-    border-radius : 5%;
-    font-size     : 15px;
-    text-align    : center;
-    cursor        : pointer;
-    padding       : 5px 5px;
-    background    : #03A9F4;
-    color         : #ffffff;
-    border        : 2px solid #03A9F4;
+    display: inline-block;
+    border-radius: 5%;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 5px;
+    background: #03a9f4;
+    color: #ffffff;
+    border: 2px solid #03a9f4;
     width: 200px;
     margin: 10px 100px;
   }
   img {
     border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -203,15 +208,15 @@ main {
     color: darken(#f9f9f9, 50%);
   }
   .btn {
-    display       : inline-block;
-    border-radius : 5%;
-    font-size     : 15px;
-    text-align    : center;
-    cursor        : pointer;
-    padding       : 5px 5px;
-    background    : #03A9F4;
-    color         : #ffffff;
-    border        : 2px solid #03A9F4;
+    display: inline-block;
+    border-radius: 5%;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 5px;
+    background: #03a9f4;
+    color: #ffffff;
+    border: 2px solid #03a9f4;
     width: 200px;
     margin: 20px 110px;
   }
@@ -226,49 +231,49 @@ footer {
 }
 
 .copy-right {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 // flash_message---------------------------------------------------------
 .alert {
-	text-align: center;
+  text-align: center;
 }
 .alert-info {
-    background-color: #bde9ff;
-    border-color: #bde9ff;
-    color: #4c6977;
+  background-color: #bde9ff;
+  border-color: #bde9ff;
+  color: #4c6977;
 }
 
 .alert-danger {
-    background-color: #f3c0c0;
-    border-color: #f3c0c0;
-    color: #3e3a3a;
+  background-color: #f3c0c0;
+  border-color: #f3c0c0;
+  color: #3e3a3a;
 }
 
 #error_explanation {
-    color:#262626;
-    background:#FFEBE8;
-    text-align: center;
-    border: 2px solid #990000;
-    padding: 12px;
-    font-weight: 850;
-    width: 350px;
-    margin: 0 auto;
-    li {
-      list-style: none;
-      text-align: left;
-    }
+  color: #262626;
+  background: #ffebe8;
+  text-align: center;
+  border: 2px solid #990000;
+  padding: 12px;
+  font-weight: 850;
+  width: 350px;
+  margin: 0 auto;
+  li {
+    list-style: none;
+    text-align: left;
   }
+}
 
 // pagination-----------------------------------------------------------
 .paginate {
   margin: 30px auto;
-  .pagination{
+  .pagination {
     margin: auto;
     width: 50%;
     display: flex;
     justify-content: center;
-     span{
+    span {
       background-color: rgba(158, 158, 158, 0.4);
       text-align: center;
       width: 50px;
@@ -278,11 +283,9 @@ footer {
   }
 }
 
-
 // レスポンシブ対応-------------------------------------------------------
 
-@media screen and (max-width:480px) {
-
+@media screen and (max-width: 480px) {
   main {
     width: 100%;
     padding: 0px;
@@ -299,7 +302,6 @@ footer {
     margin-left: 10px;
   }
 
-
   //ハンバーガーメニュー
   #hm-icon {
     position: fixed;
@@ -310,7 +312,7 @@ footer {
   .menu-trigger,
   .menu-trigger span {
     display: inline-block;
-    transition: all .4s;
+    transition: all 0.4s;
     box-sizing: border-box;
   }
   .menu-trigger {
@@ -338,7 +340,7 @@ footer {
   .menu-trigger.active span:nth-child(1) {
     -webkit-transform: translateY(20px) rotate(-45deg);
     transform: translateY(20px) rotate(-45deg);
-    background-color: #FFF;
+    background-color: #fff;
   }
   .menu-trigger.active span:nth-child(2) {
     opacity: 0;
@@ -346,14 +348,14 @@ footer {
   .menu-trigger.active span:nth-child(3) {
     -webkit-transform: translateY(-20px) rotate(45deg);
     transform: translateY(-20px) rotate(45deg);
-    background-color: #FFF;
+    background-color: #fff;
   }
   /* ------ spメニュー ------ */
   #sp-menu {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     width: 100%;
     min-height: 100%;
@@ -375,23 +377,21 @@ footer {
     }
   }
 
-
-
-  #page_top{
+  #page_top {
     width: 50px;
     height: 50px;
     position: fixed;
     right: 10px;
     bottom: 10px;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, 0.8);
     opacity: 0.6;
     border-radius: 50%;
-    }
+  }
 
-  #page_top a::before{
-    font-family: 'Font Awesome 5 Free';
+  #page_top a::before {
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: '\f062';
+    content: "\f062";
     font-size: 25px;
     color: #fff;
     position: absolute;
@@ -409,23 +409,27 @@ footer {
   .new-user {
     border: none;
   }
-  
+
   .login-user {
     border: none;
   }
-  
+
   .login-form {
     width: 100%;
     text-align: center;
-    #user_email, #user_password {
+    #user_email,
+    #user_password {
       width: 60%;
     }
   }
-  
+
   .signup-form {
     width: 100%;
     text-align: center;
-     #user_name, #user_email, #user_password, #user_password_confirmation {
+    #user_name,
+    #user_email,
+    #user_password,
+    #user_password_confirmation {
       width: 85%;
     }
     #user_introduction {
@@ -440,7 +444,4 @@ footer {
       width: 80%;
     }
   }
-  
-
-
 }
