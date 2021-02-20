@@ -405,5 +405,42 @@ footer {
     text-align: center;
   }
 
+  //devise------------------------
+  .new-user {
+    border: none;
+  }
+  
+  .login-user {
+    border: none;
+  }
+  
+  .login-form {
+    width: 100%;
+    text-align: center;
+    #user_email, #user_password {
+      width: 60%;
+    }
+  }
+  
+  .signup-form {
+    width: 100%;
+    text-align: center;
+     #user_name, #user_email, #user_password, #user_password_confirmation {
+      width: 85%;
+    }
+    #user_introduction {
+      width: 90%;
+    }
+  }
+
+  .reset-form {
+    width: 90%;
+    text-align: center;
+    #user_email {
+      width: 80%;
+    }
+  }
+  
+
 
 }

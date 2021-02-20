@@ -338,8 +338,9 @@
     width: 100%;
     text-align: center;
     img {
-      margin: 20px;
+      margin: 20px 0;
       text-align: center;
+      width: 100%;
     }
     .post-item-recommend {
       width: 100%;
@@ -355,6 +356,7 @@
 
   .comment-title {
     padding-left: 20px;
+    margin-top: 20px;
   }
 
   .post-comment {
@@ -380,9 +382,11 @@
     padding: 40px 10px;
     text-align: center;
     img {
-      margin: 10px auto;
+      margin: 10px 0;
       border-radius: 2%;
       border: 1px solid black;
+      width: 100%;
+
     }
     .post-item-edit-form {
       margin-left: 0px;
@@ -422,7 +426,5 @@
       display: flex;
     }
   }
-
-
 
 }

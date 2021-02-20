@@ -491,16 +491,43 @@
 @media screen and (max-width:480px) {
 
   // homes/ranking------------------------------------------------------------
+  #tab-menu li a {
+    font-size: 10px;
+  }
+  
+
+  #tab-contents .tab {
+    width: 100%;
+    padding: 0px;
+  }
+  
+
   .tab-content:first-child {
     margin: 0px auto 30px;
+    text-align: center;
+    img {
+      width: 80%;
+      height: 80%;
+    }
   }
 
   .tab-content:nth-child(2) {
     margin: 0px auto 30px;
+    text-align: center;
+    img {
+      width: 80%;
+      height: 80%;
+    }
+
   }
 
   .tab-content:nth-child(3) {
     margin: 0px auto 30px;
+    text-align: center;
+    img {
+      width: 80%;
+      height: 80%;
+    }
   }
 
   .tab-content:nth-child(n+4) {
@@ -509,18 +536,42 @@
 
   .tab-user-content:first-child {
     margin: 0px auto 30px;
+    text-align: center;
+    img {
+      width: 70%;
+      height: 70%;
+    }
+
   }
 
   .tab-user-content:nth-child(2) {
     margin: 0px auto 30px;
+    text-align: center;
+    img {
+      width: 70%;
+      height: 70%;
+    }
+
   }
 
   .tab-user-content:nth-child(3) {
     margin: 0px auto 30px;
+    text-align: center;
+    img {
+      width: 70%;
+      height: 70%;
+    }
+
   }
 
   .tab-user-content:nth-child(n+4) {
     margin: 0px auto 30px;
+    text-align: center;
+    img {
+      width: 50%;
+      height: 50%;
+    }
+
   }
 
   // homes/top------------------------------------------------------------
@@ -580,6 +631,11 @@
     margin-top: 0px;
     .start-image {
       width: 100%;
+      height: 250px;
+    }
+    .btn1 {
+      width: 80%;
+      margin: 10px 0;
     }
   }
 
@@ -589,7 +645,8 @@
     margin-top: 0px;
     .top-image1 {
       width: 100%;
-      height: 300px;
+      height: 250px;
+
     }
     .start-2-content {
       width: 100%;
@@ -608,7 +665,8 @@
     margin-top: 0px;
     .top-image2 {
       width: 100%;
-      height: 300px;
+      height: 250px;
+
     }
     .start-3-content {
     width: 100%;
@@ -624,7 +682,8 @@
     margin-top: 0px;
     .top-image3 {
       width: 100%;
-      height: 300px;
+      height: 250px;
+
     }
     .start-4-content {
       h2 {
@@ -639,7 +698,8 @@
     margin-top: 0px;
     .top-image4 {
       width: 100%;
-      height: 400px;
+      height: 300px;
+
     }
     .start-5-content {
       width: 100%;
